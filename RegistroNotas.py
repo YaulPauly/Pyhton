@@ -1,17 +1,10 @@
 # inicializamos la clase
 class Alumno:
     
-    def inicializar(usuario,nombre,nota):
+    def __init__(usuario,nombre,nota):
         usuario.nombre=nombre
         usuario.nota=nota
- 
- 
-    # función para imprimir los datos
-    def imprimir(data):
-               print("Nombre: ",data.nombre)
-               print("Nota: ",data.nota)
- 
- 
+  
     # función para obtener el resultado
     def resultado(calificacion):
             if calificacion.nota < 5:
@@ -23,15 +16,14 @@ class Alumno:
  
 # bloque principal
 # creamos los nuevos objetos
-alumno1=Alumno()
-alumno2=Alumno()
- 
-# inicializamos los atributos
-alumno1.inicializar("Paul",10)
-alumno2.inicializar("Mary",3)
- 
+# inicializamos los atributos              
+alumno1=Alumno("Paul",10)
+alumno2=Alumno("Mary",3)
+  
 # imprimimos los datos y resultados de cada alumno
-alumno1.imprimir()
+print("Nombre:",alumno1.nombre)
+print("Nota:",alumno1.nota)
 alumno1.resultado()
-alumno2.imprimir()
+print("Nombre:",alumno2.nombre)
+print("Nota:",alumno2.nota)
 alumno2.resultado()
